@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 @import "reset";
-@import "../../node_modules/bootstrap-4-grid/scss/grid";
 @import "content";
-
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -15,8 +13,4 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.lt-text{
-  display: block;
-  color:green;
 }

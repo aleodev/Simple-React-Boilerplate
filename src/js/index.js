@@ -1,14 +1,9 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 // import {TweenLite, CSSPlugin} from 'gsap'
-import $ from 'jquery'
+// import $ from 'jquery'
 import Content from './components/Content'
 class Layout extends Component {
-
-  componentDidMount() {
-    $(document).ready(function() {})
-
-  }
   constructor() {
     super()
     this.state = {}
