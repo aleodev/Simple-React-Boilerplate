@@ -1,12 +1,14 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-// import {TweenLite, CSSPlugin} from 'gsap'
-// import $ from 'jquery'
+import TweenLite from 'gsap/src/minified/TweenLite.min'
+import $ from 'jquery/dist/jquery.min'
 import Content from './components/Content'
 class Layout extends Component {
   constructor() {
     super()
     this.state = {}
+  }
+  componentDidMount() {
   }
   render() {
     return (<div>

@@ -9,6 +9,7 @@ gulp.task('default', [
 ], () => {
   gulp.watch('./src/sass/**/*', ['styles'])
   gulp.watch('./src/js/**/*', ['webpack'])
+  gulp.watch('./src/*.html', ['webpack'])
   gulp.watch(['./public/**/*', './public/*', '!public/scripts/.#*js', '!public/css/**/.#*css']).on('change', browserSync.reload)
 })
 
@@ -20,5 +21,5 @@ gulp.task('browser-sync', ['styles'], function() {
   browserSync.init({server: './public', notify: false, open: false})
 })
 gulp.task('webpack', () => {
-  return gulp.src('*.js', {read: false}).pipe(shell(['webpack'])).pipe(browserSync.stream())
+  return gulp.src('*.js', {read: false}).pipe(shell(['webpack && cp src/index.html public/index.html'])).pipe(browserSync.stream())
 })
