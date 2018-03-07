@@ -91,7 +91,7 @@ var Content = function Content() {
   return _react2.default.createElement(
     "div",
     { className: "center", id: "landing" },
-    "ALEXOFRONTEND"
+    "SIMPLE REACT BOILERPLATE"
   );
 };
 exports.default = Content;

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Content = () => {
   return <div className="center" id="landing">
-ALEXOFRONTEND
+SIMPLE REACT BOILERPLATE
 </div>
 
 };
