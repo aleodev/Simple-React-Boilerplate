@@ -2,17 +2,31 @@
 @import "reset";
 @import "content";
 
+::-webkit-scrollbar-track
+{
+    background-color: #fff;
+}
+::-webkit-scrollbar
+{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: #000000;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background: #FFF;
   width: 100%;
   height: 100%;
 }
-.center{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    font-family: Crimson Text;
+
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-family: Crimson Text;
 }
