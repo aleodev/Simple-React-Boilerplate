@@ -11,10 +11,29 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, 'public/scripts')
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          chunks: "initial",
+          minChunks: 3,
+          maxInitialRequests: 10, //
+          minSize: 5 //
+        },
+        vendor: {
+          test: /node_modules/,
+          chunks: "initial",
+          name: "vendor",
+          priority: 10,
+          enforce: true
+        }
+      }
+    }
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
@@ -29,39 +48,10 @@ module.exports = {
           ]
         }
       }, {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: "style-loader"
-          }, {
-            loader: "css-loader",
-            options: {
-              sourceMap: true
-            }
-          }, {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true
-            }
-          }
-        ]
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'eslint-loader']
       }
     ]
-  },
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: function(module) {
-        // this assumes your vendor imports exist in the node_modules directory
-        return module.context && module.context.indexOf('node_modules') !== -1;
-      }
-    })
-    //         new webpack.optimize.UglifyJsPlugin({
-    //   sourceMap: options.devtool && (options.devtool.indexOf("sourcemap") >= 0 || options.devtool.indexOf("source-map") >= 0)
-    // }),
-    // new webpack.Define
-    // new webpack.optimize.CommonsChunkPlugin({
-    //     name: 'manifest' But since there are no more common modules between them we end up with just the runtime code included in the manifest file
-    // })
-  ]
+  }
 };
