@@ -16,17 +16,17 @@ var _reactDom = __webpack_require__(33);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _TweenLite = __webpack_require__(99);
+var _TweenMax = __webpack_require__(99);
 
-var _TweenLite2 = _interopRequireDefault(_TweenLite);
+var _TweenMax2 = _interopRequireDefault(_TweenMax);
 
 var _jquery = __webpack_require__(100);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _Content = __webpack_require__(98);
+var _Landing = __webpack_require__(98);
 
-var _Content2 = _interopRequireDefault(_Content);
+var _Landing2 = _interopRequireDefault(_Landing);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -50,14 +50,16 @@ var Layout = function (_Component) {
 
   _createClass(Layout, [{
     key: 'componentDidMount',
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      _TweenMax2.default.from("#landing", 3, { y: 100, autoAlpha: 0 });
+    }
   }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(_Content2.default, null)
+        _react2.default.createElement(_Landing2.default, null)
       );
     }
   }]);
@@ -87,14 +89,41 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Content = function Content() {
+var Landing = function Landing() {
   return _react2.default.createElement(
     "div",
-    { className: "center", id: "landing" },
-    "SIMPLE REACT BOILERPLATE"
+    { id: "home" },
+    _react2.default.createElement(
+      "div",
+      { className: "center", id: "landing" },
+      _react2.default.createElement(
+        "div",
+        { className: "center-item" },
+        _react2.default.createElement(
+          "a",
+          { className: "ldn" },
+          "A Simple React Boilerplate"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "gitmenu" },
+          _react2.default.createElement(
+            "a",
+            { className: "github-button", href: "https://github.com/aleodev/Simple-React-Boilerplate", "data-icon": "octicon-star", "data-size": "large", "data-show-count": "true", "aria-label": "Star aleodev/Simple-React-Boilerplate on GitHub" },
+            "Star"
+          ),
+          _react2.default.createElement("br", null),
+          _react2.default.createElement(
+            "a",
+            { className: "github-button", href: "https://github.com/aleodev/Simple-React-Boilerplate", "data-size": "large", "data-show-count": "true", "aria-label": "Follow @aleodev on GitHub" },
+            "Follow @aleodev"
+          )
+        )
+      )
+    )
   );
 };
-exports.default = Content;
+exports.default = Landing;
 
 /***/ })
 
