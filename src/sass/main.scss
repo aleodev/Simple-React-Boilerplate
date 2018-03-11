@@ -2,17 +2,17 @@
 @import "reset";
 @import "content";
 
-::-webkit-scrollbar-track
-{
-    background-color: #fff;
+::-webkit-scrollbar-track {
+  background-color: #fff;
 }
-::-webkit-scrollbar
-{
-    width: 5px;
+
+::-webkit-scrollbar {
+  display: none;
+  width: 5px;
 }
-::-webkit-scrollbar-thumb
-{
-    background-color: #000000;
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
 }
 
 body {
@@ -22,11 +22,32 @@ body {
   height: 100%;
 }
 
-.center {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  font-family: Crimson Text;
+#home {
+  height: 100%;
+  width: 100%;
+
+  .center {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    .center-item {
+      text-align: center;
+    }
+  }
+
+  .ldn {
+    font-size: 4.236em;
+    font-family: Crimson Text;
+    color: #242A2E;
+  }
+
+  .gitmenu {
+    margin-top: 40px;
+
+    iframe {
+      margin-bottom: 20px;
+    }
+  }
 }
