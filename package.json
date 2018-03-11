@@ -1,7 +1,7 @@
 {
   "name": "AlexFrontendBoilerplate(React)",
   "version": "1.0.0",
-  "description": "A react boilerplate made by alexofrontend",
+  "description": "A simple react boilerplate made by alexofrontend",
   "main": "index.js",
   "author": "Alex Ortiz",
   "license": "MIT",
