@@ -1,18 +1,19 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import TweenLite from 'gsap/src/minified/TweenLite.min'
+import TweenMax from 'gsap/src/minified/TweenMax.min'
 import $ from 'jquery/dist/jquery.min'
-import Content from './components/Content'
+import Landing from './components/Landing'
 class Layout extends Component {
   constructor() {
     super()
     this.state = {}
   }
-  componentDidMount() {
+  componentDidMount(){
+    TweenMax.from("#landing", 3, {y:100, autoAlpha:0})
   }
   render() {
     return (<div>
-      <Content></Content>
+      <Landing></Landing>
     </div>)
   }
 }
