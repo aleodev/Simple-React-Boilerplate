@@ -1,11 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
 const VENDOR_LIBS = ['redux', 'react-redux', 'react-dom']
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    index: './src/js/index.js',
-    vendor: VENDOR_LIBS
+    vendor: VENDOR_LIBS,
+    index: './src/js/index.js'
+
   },
   output: {
     filename: '[name].js',
@@ -53,5 +55,21 @@ module.exports = {
         use: ['babel-loader', 'eslint-loader']
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: '../index.html',
+      title: 'Simple React Boilerplate',
+      template: 'src/index.html',
+      files: {
+        css:["/css/main.css"],
+        js: ["/scripts/vendor.js", "/scripts/index.js"]
+      },
+      description: "This is a simple react boilerplate that can be used for simple react based projects.",
+      keywords: "react, simple, boilerplate, developer, website",
+      viewport: "width=device-width, initial-scale=1",
+      fontsUrl: "https://fonts.googleapis.com/css?family=Crimson+Text|Roboto",
+      appEntryId: "app"
+    })
+  ]
 };

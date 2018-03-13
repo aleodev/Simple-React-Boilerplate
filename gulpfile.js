@@ -22,5 +22,5 @@ gulp.task('browser-sync', ['styles'], function() {
 })
 gulp.task('webpack', () => {
   gulp.src('src/assets/**').pipe(gulp.dest('./public/assets'))
-  return gulp.src('*.js', {read: false}).pipe(shell(['webpack --mode development && cp src/index.html public/index.html'])).pipe(browserSync.stream())
+  return gulp.src('*.js', {read: false}).pipe(shell(['webpack --mode development'])).pipe(browserSync.stream())
 })

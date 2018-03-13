@@ -3,22 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Simple React Boilerplate</title>
-  <meta name="Description" content="This is a simple react boilerplate that can be used for simple react based projects.">
-  <meta name="Keywords" content="react, simple, boilerplate, developer, website">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <meta name="Description" content="<%= htmlWebpackPlugin.options.description %>">
+  <meta name="Keywords" content="<%= htmlWebpackPlugin.options.keywords %>">
+  <meta name="viewport" content="<%= htmlWebpackPlugin.options.viewport %>">
+  <link href="<%= htmlWebpackPlugin.options.fontsUrl %>" rel="stylesheet">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.files.css[0] %>">
 
 
 </head>
 
 <body>
-  <div id="app"></div>
-
-  <script src="/scripts/vendor.js"></script>
-  <script src="/scripts/index.js"></script>
-
+  <div id="<%= htmlWebpackPlugin.options.appEntryId %>"></div>
 </body>
 
 </html>
