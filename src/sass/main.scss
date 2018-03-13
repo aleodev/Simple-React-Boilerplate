@@ -20,33 +20,3 @@ body {
   width: 100%;
   height: 100%;
 }
-
-#home {
-  height: 100%;
-  width: 100%;
-
-  .center {
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-
-    .center-item {
-      text-align: center;
-    }
-  }
-
-  .ldn {
-    font-size: 4.236em;
-    font-family: Crimson Text;
-    color: #242A2E;
-  }
-
-  .gitmenu {
-    margin-top: 40px;
-
-    iframe {
-      margin-bottom: 20px;
-    }
-  }
-}
