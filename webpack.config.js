@@ -56,13 +56,12 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
+  plugins: [new HtmlWebpackPlugin({
       filename: '../index.html',
       title: 'Simple React Boilerplate',
       template: 'src/index.html',
       files: {
-        css:["/css/main.css"],
+        css: ["/css/main.css"],
         js: ["/scripts/vendor.js", "/scripts/index.js"]
       },
       description: "This is a simple react boilerplate that can be used for simple react based projects.",
@@ -70,6 +69,5 @@ module.exports = {
       viewport: "width=device-width, initial-scale=1",
       fontsUrl: "https://fonts.googleapis.com/css?family=Crimson+Text|Roboto",
       appEntryId: "app"
-    })
-  ]
+    })]
 };
