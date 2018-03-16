@@ -7,17 +7,17 @@ import Landing from './components/Landing'
 // import '../sass/main.scss' [ONLY IN PRODUCTION]
 // import $ from 'jquery/dist/jquery.min' [NOT BEING USED]
 class Layout extends Component {
-  constructor() {
+  constructor () {
     super()
     this.state = {}
   }
-  componentDidMount() {
-    TweenMax.from("#landing", 3, {
-      y: 100,
+  componentDidMount () {
+    TweenMax.from('#landing', 1, {
+      y: '20vh',
       autoAlpha: 0
     })
   }
-  render() {
+  render () {
     return (<div>
       <Landing></Landing>
     </div>)
