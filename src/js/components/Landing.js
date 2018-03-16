@@ -8,5 +8,5 @@ const Landing = () => {
       </div>
     </div>
   </div>
-};
-export default Landing;
+}
+export default Landing
