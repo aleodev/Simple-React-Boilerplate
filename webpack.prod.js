@@ -33,7 +33,7 @@ module.exports = merge(config, {
   },
   plugins: [
     new UglifyJSPlugin({sourceMap: true}),
-    new ExtractTextPlugin({filename: '../css/bundle.css', allChunks: true}),
+    new ExtractTextPlugin({filename: '../css/main.css', allChunks: true}),
     new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('production')}),
     new CopyWebpackPlugin([{
         from: path.resolve(__dirname, 'src/assets'),
